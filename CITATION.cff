@@ -6,7 +6,7 @@ license: MIT
 authors:
   - family-names: Karunanithi
     given-names: Karthik
-repository-code: "https://github.com/karthikkarunanithi/catalogrisk"
+repository-code: "https://github.com/karthikknidhi/catalogrisk"
 preferred-citation:
   type: article
   title: "Per-Attack Blocking Hides Catalog Vulnerability: A Weakest-Link Analysis of Tool Manifests"

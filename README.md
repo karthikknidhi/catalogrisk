@@ -18,7 +18,7 @@ It is the companion code to:
 
 ```bash
 pip install catalogrisk          # once published to PyPI
-pip install git+https://github.com/karthikkarunanithi/catalogrisk
+pip install git+https://github.com/karthikknidhi/catalogrisk
 ```
 
 The package uses only the standard library and needs Python 3.9 or later.

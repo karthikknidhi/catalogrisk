@@ -15,7 +15,7 @@ classifiers = ["Programming Language :: Python :: 3", "License :: OSI Approved :
 
 [project.urls]
 Paper = "https://arxiv.org/abs/2611.31338"
-Source = "https://github.com/karthikkarunanithi/catalogrisk"
+Source = "https://github.com/karthikknidhi/catalogrisk"
 
 [project.scripts]
 catalogrisk = "catalogrisk.__main__:main"
