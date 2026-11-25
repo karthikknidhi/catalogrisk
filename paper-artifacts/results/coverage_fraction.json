@@ -1,0 +1,518 @@
+{
+  "p": 0.08,
+  "n_seeds": 2000,
+  "sizes": [
+    50,
+    100,
+    200,
+    400
+  ],
+  "h_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.3,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "by_h": {
+    "0.0": {
+      "50": {
+        "n_sensitive": 15,
+        "http_only_vulnerable_rate": 0.0,
+        "http_only_vulnerable_ci95": [
+          0.0,
+          0.0019
+        ],
+        "all_sink_vulnerable_rate": 0.71,
+        "all_sink_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "http_only_analytic": 0.0,
+        "all_sink_analytic": 0.7137
+      },
+      "100": {
+        "n_sensitive": 30,
+        "http_only_vulnerable_rate": 0.0,
+        "http_only_vulnerable_ci95": [
+          0.0,
+          0.0019
+        ],
+        "all_sink_vulnerable_rate": 0.912,
+        "all_sink_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "http_only_analytic": 0.0,
+        "all_sink_analytic": 0.918
+      },
+      "200": {
+        "n_sensitive": 60,
+        "http_only_vulnerable_rate": 0.0,
+        "http_only_vulnerable_ci95": [
+          0.0,
+          0.0019
+        ],
+        "all_sink_vulnerable_rate": 0.9935,
+        "all_sink_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "http_only_analytic": 0.0,
+        "all_sink_analytic": 0.9933
+      },
+      "400": {
+        "n_sensitive": 120,
+        "http_only_vulnerable_rate": 0.0,
+        "http_only_vulnerable_ci95": [
+          0.0,
+          0.0019
+        ],
+        "all_sink_vulnerable_rate": 1.0,
+        "all_sink_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "http_only_analytic": 0.0,
+        "all_sink_analytic": 1.0
+      }
+    },
+    "0.05": {
+      "50": {
+        "n_sensitive": 15,
+        "http_only_vulnerable_rate": 0.0575,
+        "http_only_vulnerable_ci95": [
+          0.0481,
+          0.0686
+        ],
+        "all_sink_vulnerable_rate": 0.71,
+        "all_sink_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "http_only_analytic": 0.0583,
+        "all_sink_analytic": 0.7137
+      },
+      "100": {
+        "n_sensitive": 30,
+        "http_only_vulnerable_rate": 0.1105,
+        "http_only_vulnerable_ci95": [
+          0.0975,
+          0.125
+        ],
+        "all_sink_vulnerable_rate": 0.912,
+        "all_sink_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "http_only_analytic": 0.1133,
+        "all_sink_analytic": 0.918
+      },
+      "200": {
+        "n_sensitive": 60,
+        "http_only_vulnerable_rate": 0.211,
+        "http_only_vulnerable_ci95": [
+          0.1937,
+          0.2294
+        ],
+        "all_sink_vulnerable_rate": 0.9935,
+        "all_sink_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "http_only_analytic": 0.2138,
+        "all_sink_analytic": 0.9933
+      },
+      "400": {
+        "n_sensitive": 120,
+        "http_only_vulnerable_rate": 0.382,
+        "http_only_vulnerable_ci95": [
+          0.361,
+          0.4035
+        ],
+        "all_sink_vulnerable_rate": 1.0,
+        "all_sink_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "http_only_analytic": 0.3818,
+        "all_sink_analytic": 1.0
+      }
+    },
+    "0.1": {
+      "50": {
+        "n_sensitive": 15,
+        "http_only_vulnerable_rate": 0.1055,
+        "http_only_vulnerable_ci95": [
+          0.0928,
+          0.1197
+        ],
+        "all_sink_vulnerable_rate": 0.71,
+        "all_sink_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "http_only_analytic": 0.1135,
+        "all_sink_analytic": 0.7137
+      },
+      "100": {
+        "n_sensitive": 30,
+        "http_only_vulnerable_rate": 0.212,
+        "http_only_vulnerable_ci95": [
+          0.1946,
+          0.2305
+        ],
+        "all_sink_vulnerable_rate": 0.912,
+        "all_sink_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "http_only_analytic": 0.2141,
+        "all_sink_analytic": 0.918
+      },
+      "200": {
+        "n_sensitive": 60,
+        "http_only_vulnerable_rate": 0.377,
+        "http_only_vulnerable_ci95": [
+          0.356,
+          0.3985
+        ],
+        "all_sink_vulnerable_rate": 0.9935,
+        "all_sink_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "http_only_analytic": 0.3824,
+        "all_sink_analytic": 0.9933
+      },
+      "400": {
+        "n_sensitive": 120,
+        "http_only_vulnerable_rate": 0.624,
+        "http_only_vulnerable_ci95": [
+          0.6026,
+          0.645
+        ],
+        "all_sink_vulnerable_rate": 1.0,
+        "all_sink_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "http_only_analytic": 0.6186,
+        "all_sink_analytic": 1.0
+      }
+    },
+    "0.2": {
+      "50": {
+        "n_sensitive": 15,
+        "http_only_vulnerable_rate": 0.217,
+        "http_only_vulnerable_ci95": [
+          0.1995,
+          0.2356
+        ],
+        "all_sink_vulnerable_rate": 0.71,
+        "all_sink_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "http_only_analytic": 0.2149,
+        "all_sink_analytic": 0.7137
+      },
+      "100": {
+        "n_sensitive": 30,
+        "http_only_vulnerable_rate": 0.3835,
+        "http_only_vulnerable_ci95": [
+          0.3624,
+          0.405
+        ],
+        "all_sink_vulnerable_rate": 0.912,
+        "all_sink_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "http_only_analytic": 0.3836,
+        "all_sink_analytic": 0.918
+      },
+      "200": {
+        "n_sensitive": 60,
+        "http_only_vulnerable_rate": 0.607,
+        "http_only_vulnerable_ci95": [
+          0.5854,
+          0.6282
+        ],
+        "all_sink_vulnerable_rate": 0.9935,
+        "all_sink_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "http_only_analytic": 0.6201,
+        "all_sink_analytic": 0.9933
+      },
+      "400": {
+        "n_sensitive": 120,
+        "http_only_vulnerable_rate": 0.8465,
+        "http_only_vulnerable_ci95": [
+          0.83,
+          0.8616
+        ],
+        "all_sink_vulnerable_rate": 1.0,
+        "all_sink_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "http_only_analytic": 0.8557,
+        "all_sink_analytic": 1.0
+      }
+    },
+    "0.3": {
+      "50": {
+        "n_sensitive": 15,
+        "http_only_vulnerable_rate": 0.3065,
+        "http_only_vulnerable_ci95": [
+          0.2867,
+          0.3271
+        ],
+        "all_sink_vulnerable_rate": 0.71,
+        "all_sink_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "http_only_analytic": 0.3054,
+        "all_sink_analytic": 0.7137
+      },
+      "100": {
+        "n_sensitive": 30,
+        "http_only_vulnerable_rate": 0.5145,
+        "http_only_vulnerable_ci95": [
+          0.4926,
+          0.5364
+        ],
+        "all_sink_vulnerable_rate": 0.912,
+        "all_sink_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "http_only_analytic": 0.5175,
+        "all_sink_analytic": 0.918
+      },
+      "200": {
+        "n_sensitive": 60,
+        "http_only_vulnerable_rate": 0.7465,
+        "http_only_vulnerable_ci95": [
+          0.727,
+          0.7651
+        ],
+        "all_sink_vulnerable_rate": 0.9935,
+        "all_sink_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "http_only_analytic": 0.7672,
+        "all_sink_analytic": 0.9933
+      },
+      "400": {
+        "n_sensitive": 120,
+        "http_only_vulnerable_rate": 0.933,
+        "http_only_vulnerable_ci95": [
+          0.9212,
+          0.9431
+        ],
+        "all_sink_vulnerable_rate": 1.0,
+        "all_sink_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "http_only_analytic": 0.9458,
+        "all_sink_analytic": 1.0
+      }
+    },
+    "0.5": {
+      "50": {
+        "n_sensitive": 15,
+        "http_only_vulnerable_rate": 0.4545,
+        "http_only_vulnerable_ci95": [
+          0.4328,
+          0.4764
+        ],
+        "all_sink_vulnerable_rate": 0.71,
+        "all_sink_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "http_only_analytic": 0.4579,
+        "all_sink_analytic": 0.7137
+      },
+      "100": {
+        "n_sensitive": 30,
+        "http_only_vulnerable_rate": 0.7105,
+        "http_only_vulnerable_ci95": [
+          0.6902,
+          0.73
+        ],
+        "all_sink_vulnerable_rate": 0.912,
+        "all_sink_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "http_only_analytic": 0.7061,
+        "all_sink_analytic": 0.918
+      },
+      "200": {
+        "n_sensitive": 60,
+        "http_only_vulnerable_rate": 0.9105,
+        "http_only_vulnerable_ci95": [
+          0.8972,
+          0.9222
+        ],
+        "all_sink_vulnerable_rate": 0.9935,
+        "all_sink_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "http_only_analytic": 0.9136,
+        "all_sink_analytic": 0.9933
+      },
+      "400": {
+        "n_sensitive": 120,
+        "http_only_vulnerable_rate": 0.9895,
+        "http_only_vulnerable_ci95": [
+          0.984,
+          0.9931
+        ],
+        "all_sink_vulnerable_rate": 1.0,
+        "all_sink_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "http_only_analytic": 0.9925,
+        "all_sink_analytic": 1.0
+      }
+    },
+    "0.75": {
+      "50": {
+        "n_sensitive": 15,
+        "http_only_vulnerable_rate": 0.599,
+        "http_only_vulnerable_ci95": [
+          0.5774,
+          0.6203
+        ],
+        "all_sink_vulnerable_rate": 0.71,
+        "all_sink_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "http_only_analytic": 0.6047,
+        "all_sink_analytic": 0.7137
+      },
+      "100": {
+        "n_sensitive": 30,
+        "http_only_vulnerable_rate": 0.8415,
+        "http_only_vulnerable_ci95": [
+          0.8248,
+          0.8568
+        ],
+        "all_sink_vulnerable_rate": 0.912,
+        "all_sink_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "http_only_analytic": 0.8437,
+        "all_sink_analytic": 0.918
+      },
+      "200": {
+        "n_sensitive": 60,
+        "http_only_vulnerable_rate": 0.9735,
+        "http_only_vulnerable_ci95": [
+          0.9655,
+          0.9797
+        ],
+        "all_sink_vulnerable_rate": 0.9935,
+        "all_sink_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "http_only_analytic": 0.9756,
+        "all_sink_analytic": 0.9933
+      },
+      "400": {
+        "n_sensitive": 120,
+        "http_only_vulnerable_rate": 0.999,
+        "http_only_vulnerable_ci95": [
+          0.9964,
+          0.9997
+        ],
+        "all_sink_vulnerable_rate": 1.0,
+        "all_sink_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "http_only_analytic": 0.9994,
+        "all_sink_analytic": 1.0
+      }
+    },
+    "1.0": {
+      "50": {
+        "n_sensitive": 15,
+        "http_only_vulnerable_rate": 0.71,
+        "http_only_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "all_sink_vulnerable_rate": 0.71,
+        "all_sink_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "http_only_analytic": 0.7137,
+        "all_sink_analytic": 0.7137
+      },
+      "100": {
+        "n_sensitive": 30,
+        "http_only_vulnerable_rate": 0.912,
+        "http_only_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "all_sink_vulnerable_rate": 0.912,
+        "all_sink_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "http_only_analytic": 0.918,
+        "all_sink_analytic": 0.918
+      },
+      "200": {
+        "n_sensitive": 60,
+        "http_only_vulnerable_rate": 0.9935,
+        "http_only_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "all_sink_vulnerable_rate": 0.9935,
+        "all_sink_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "http_only_analytic": 0.9933,
+        "all_sink_analytic": 0.9933
+      },
+      "400": {
+        "n_sensitive": 120,
+        "http_only_vulnerable_rate": 1.0,
+        "http_only_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "all_sink_vulnerable_rate": 1.0,
+        "all_sink_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "http_only_analytic": 1.0,
+        "all_sink_analytic": 1.0
+      }
+    }
+  }
+}

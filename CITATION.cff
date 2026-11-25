@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the paper below."
+title: "catalogrisk: weakest-link risk for agent tool catalogs"
+version: 0.1.0
+license: MIT
+authors:
+  - family-names: Karunanithi
+    given-names: Karthik
+repository-code: "https://github.com/karthikkarunanithi/catalogrisk"
+preferred-citation:
+  type: article
+  title: "Per-Attack Blocking Hides Catalog Vulnerability: A Weakest-Link Analysis of Tool Manifests"
+  authors:
+    - family-names: Karunanithi
+      given-names: Karthik
+  year: 2026
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.31338"
+  url: "https://arxiv.org/abs/2611.31338"
+  notes: "Poster, Third Workshop on Agents in the Wild (AIWILD), NeurIPS 2026"

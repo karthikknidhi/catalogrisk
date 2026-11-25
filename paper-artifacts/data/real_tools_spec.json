@@ -1,0 +1,1617 @@
+{
+ "provenance": {
+  "gold": "OpenAPPA marketplace batteries (github, posthog, launchdarkly, sentry), OpenAPPA commit fc46b128babfeaf0f29e288d326ae3d3db12627e",
+  "descriptions": {
+   "github": "github/github-mcp-server 4bcdcdf8d7beee98c9448e73e257308280924cc4",
+   "posthog": "PostHog/mcp 13aaf2c6e5317e01e61d3af24e7b0744f527ed3e (schema/tool-definitions.json)",
+   "launchdarkly": "launchdarkly/mcp-server 44aaf6024e9e17c998182bf3e42cbf16cdf8000e",
+   "sentry": "getsentry/sentry-mcp 79b722483434a3a7edd1b184dda2b5e1bb574a33 (packages/mcp-core/src/toolDefinitions.json)"
+  },
+  "description_rule": "first sentence of the server's own tool description",
+  "restricted_rule": "the battery's default rule for the tool (or, for tools with only argument rules, any rule) narrows the output audience to the requester (self) or the organization (internal)",
+  "gold_channels": "self -> display_only; internal -> display_only, internal_email; unrestricted sinks -> []"
+ },
+ "tools": [
+  {
+   "service": "github",
+   "name": "add_comment_to_pending_review",
+   "desc": "Add review comment to the requester's latest pending pull request review.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "add_issue_comment",
+   "desc": "Add a comment and/or reaction to a specific issue or issue comment in a GitHub repository.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/issues.go"
+  },
+  {
+   "service": "github",
+   "name": "add_reply_to_pull_request_comment",
+   "desc": "Add a reply and/or reaction to an existing pull request comment.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "create_branch",
+   "desc": "Create a new branch in a GitHub repository",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "create_or_update_file",
+   "desc": "Create or update a single file in a GitHub repository.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "create_pull_request",
+   "desc": "Create a new pull request in a GitHub repository.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "create_repository",
+   "desc": "Create a new GitHub repository in your account or specified organization",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "delete_file",
+   "desc": "Delete a file from a GitHub repository",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "fork_repository",
+   "desc": "Fork a GitHub repository to your account or specified organization",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "get_commit",
+   "desc": "Get details for a commit from a GitHub repository",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "get_file_contents",
+   "desc": "Get the contents of a file or directory from a GitHub repository",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "get_label",
+   "desc": "Get a specific label from a repository.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/labels.go"
+  },
+  {
+   "service": "github",
+   "name": "get_latest_release",
+   "desc": "Get the latest release in a GitHub repository",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "get_me",
+   "desc": "Get details of the authenticated GitHub user.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only",
+    "internal_email",
+    "file_tmp",
+    "any_network"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/context_tools.go"
+  },
+  {
+   "service": "github",
+   "name": "get_release_by_tag",
+   "desc": "Get a specific release by its tag name in a GitHub repository",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "get_tag",
+   "desc": "Get details about a specific git tag in a GitHub repository",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "get_team_members",
+   "desc": "Get member usernames of a specific team in an organization.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/context_tools.go"
+  },
+  {
+   "service": "github",
+   "name": "get_teams",
+   "desc": "Get details of the teams the user is a member of.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/context_tools.go"
+  },
+  {
+   "service": "github",
+   "name": "issue_read",
+   "desc": "Get information about a specific issue in a GitHub repository.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/issues.go"
+  },
+  {
+   "service": "github",
+   "name": "issue_write",
+   "desc": "Create a new or update an existing issue in a GitHub repository.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/issues.go"
+  },
+  {
+   "service": "github",
+   "name": "list_branches",
+   "desc": "List branches in a GitHub repository",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "list_commits",
+   "desc": "Get list of commits of a branch in a GitHub repository.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "list_issue_fields",
+   "desc": "List issue fields for a repository or organization.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/issue_fields.go"
+  },
+  {
+   "service": "github",
+   "name": "list_issue_types",
+   "desc": "List supported issue types for a repository or its owner organization.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/issues.go"
+  },
+  {
+   "service": "github",
+   "name": "list_issues",
+   "desc": "List issues in a GitHub repository.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/issues.go"
+  },
+  {
+   "service": "github",
+   "name": "list_pull_requests",
+   "desc": "List pull requests in a GitHub repository.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "list_releases",
+   "desc": "List releases in a GitHub repository",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "list_repository_collaborators",
+   "desc": "List collaborators of a GitHub repository.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "list_tags",
+   "desc": "List git tags in a GitHub repository",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "merge_pull_request",
+   "desc": "Merge a pull request in a GitHub repository.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "pull_request_read",
+   "desc": "Get information on a specific pull request in GitHub repository.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "pull_request_review_write",
+   "desc": "Create and/or submit, delete review of a pull request.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "push_files",
+   "desc": "Push multiple files to a GitHub repository in a single commit",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/repositories.go"
+  },
+  {
+   "service": "github",
+   "name": "request_copilot_review",
+   "desc": "Request a GitHub Copilot code review for a pull request.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/copilot.go"
+  },
+  {
+   "service": "github",
+   "name": "search_code",
+   "desc": "Fast and precise code search across ALL GitHub repositories using GitHub's native search engine.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/search.go"
+  },
+  {
+   "service": "github",
+   "name": "search_commits",
+   "desc": "Search for commits across GitHub repositories using GitHub's commit search syntax.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/search.go"
+  },
+  {
+   "service": "github",
+   "name": "search_issues",
+   "desc": "Search issues using natural-language semantic matching.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/issues.go (searchIssuesSemanticDescription)"
+  },
+  {
+   "service": "github",
+   "name": "search_pull_requests",
+   "desc": "Search for pull requests in GitHub repositories using issues search syntax already scoped to is:pr",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "search_repositories",
+   "desc": "Find GitHub repositories by name, description, readme, topics, or other metadata.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/search.go"
+  },
+  {
+   "service": "github",
+   "name": "search_users",
+   "desc": "Find GitHub users by username, real name, or other profile information.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/search.go"
+  },
+  {
+   "service": "github",
+   "name": "sub_issue_write",
+   "desc": "Add a sub-issue to a parent issue in a GitHub repository.",
+   "restricted": true,
+   "expert_audience": [
+    "self"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only"
+   ],
+   "description_source": "servers/github_github-mcp-server/pkg/github/issues.go"
+  },
+  {
+   "service": "github",
+   "name": "update_pull_request",
+   "desc": "Update an existing pull request in a GitHub repository.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "github",
+   "name": "update_pull_request_branch",
+   "desc": "Update the branch of a pull request with the latest changes from the base branch.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/github_github-mcp-server/pkg/github/pullrequests.go"
+  },
+  {
+   "service": "posthog",
+   "name": "add-insight-to-dashboard",
+   "desc": "Add an existing insight to a dashboard.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "create-feature-flag",
+   "desc": "Creates a new feature flag in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "dashboard-create",
+   "desc": "Create a new dashboard in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "dashboard-delete",
+   "desc": "Delete a dashboard by ID (soft delete - marks as deleted).",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "dashboard-get",
+   "desc": "Get a specific dashboard by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "dashboard-update",
+   "desc": "Update an existing dashboard by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "dashboards-get-all",
+   "desc": "Get all dashboards in the project with optional filtering.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "delete-feature-flag",
+   "desc": "Delete a feature flag in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "docs-search",
+   "desc": "Use this tool to search the PostHog documentation for information that can help the user with their request.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "error-details",
+   "desc": "Use this tool to get the details of an error in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "event-definitions-list",
+   "desc": "List all event definitions in the project with optional filtering.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "experiment-create",
+   "desc": "Create a comprehensive A/B test experiment.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "experiment-delete",
+   "desc": "Delete an experiment by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "experiment-get",
+   "desc": "Get details of a specific experiment by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "experiment-get-all",
+   "desc": "Get all experiments in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "experiment-results-get",
+   "desc": "Get comprehensive experiment results including all metrics data (primary and secondary) and exposure data.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "experiment-update",
+   "desc": "Update an existing experiment by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "feature-flag-get-all",
+   "desc": "Get all feature flags in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "feature-flag-get-definition",
+   "desc": "Get the definition of a feature flag.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "get-llm-total-costs-for-project",
+   "desc": "Fetches the total LLM daily costs for each model for a project over a given number of days.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "insight-create-from-query",
+   "desc": "Create an insight from a query that you have previously tested with 'query-run'.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "insight-delete",
+   "desc": "Delete an insight by ID (soft delete - marks as deleted).",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "insight-get",
+   "desc": "Get a specific insight by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "insight-query",
+   "desc": "Execute a query on an existing insight to get its results/data.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "insight-update",
+   "desc": "Update an existing insight by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "insights-get-all",
+   "desc": "Get all insights in the project with optional filtering.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "list-errors",
+   "desc": "Use this tool to list errors in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "organization-details-get",
+   "desc": "Get the details of the active organization.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "organizations-get",
+   "desc": "Get the organizations the user has access to.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "projects-get",
+   "desc": "Fetches projects that the user has access to in the current organization.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "properties-list",
+   "desc": "List properties for events or persons.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "property-definitions",
+   "desc": "Get event and property definitions for the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "query-generate-hogql-from-question",
+   "desc": "This is a slow tool, and you should only use it once you have tried to create a query using the 'query-run' tool, or the query is too complicated to create a trend / funnel.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "query-run",
+   "desc": "You should use this to answer questions that a user has about their data and for when you want to create a new insight.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "survey-create",
+   "desc": "Creates a new survey in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "survey-delete",
+   "desc": "Delete a survey by ID (soft delete - marks as archived).",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "survey-get",
+   "desc": "Get a specific survey by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "survey-stats",
+   "desc": "Get response statistics for a specific survey.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "survey-update",
+   "desc": "Update an existing survey by ID.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "surveys-get-all",
+   "desc": "Get all surveys in the project with optional filtering.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "surveys-global-stats",
+   "desc": "Get aggregated response statistics across all surveys in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "switch-organization",
+   "desc": "Change the active organization from the default organization.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "switch-project",
+   "desc": "Change the active project from the default project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "posthog",
+   "name": "update-feature-flag",
+   "desc": "Update a new feature flag in the project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/PostHog_mcp/schema/tool-definitions.json"
+  },
+  {
+   "service": "sentry",
+   "name": "analyze_issue_with_seer",
+   "desc": "Use Seer to analyze production errors and get detailed root cause analysis with specific code fixes.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/getsentry_sentry-mcp/packages/mcp-core/src/toolDefinitions.json"
+  },
+  {
+   "service": "sentry",
+   "name": "find_organizations",
+   "desc": "List or search the Sentry organizations the user has access to.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/getsentry_sentry-mcp/packages/mcp-core/src/toolDefinitions.json"
+  },
+  {
+   "service": "sentry",
+   "name": "find_projects",
+   "desc": "List or search projects in a Sentry organization.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/getsentry_sentry-mcp/packages/mcp-core/src/toolDefinitions.json"
+  },
+  {
+   "service": "sentry",
+   "name": "get_sentry_resource",
+   "desc": "Fetch a Sentry resource by URL, or by resourceType plus resourceId.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/getsentry_sentry-mcp/packages/mcp-core/src/toolDefinitions.json"
+  },
+  {
+   "service": "sentry",
+   "name": "search_events",
+   "desc": "Deprecated multi-dataset event search, kept for backward compatibility.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/getsentry_sentry-mcp/packages/mcp-core/src/toolDefinitions.json"
+  },
+  {
+   "service": "sentry",
+   "name": "search_issues",
+   "desc": "Search for grouped issues/problems in Sentry - returns a LIST of issues, NOT counts or aggregations.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/getsentry_sentry-mcp/packages/mcp-core/src/toolDefinitions.json"
+  },
+  {
+   "service": "sentry",
+   "name": "update_issue",
+   "desc": "Update a Sentry issue's status or assignment.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/getsentry_sentry-mcp/packages/mcp-core/src/toolDefinitions.json"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "create-ai-config",
+   "desc": "Creates a new AI Config within a project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsCreate.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "create-ai-config-variation",
+   "desc": "Adds a new variation to an AI Config, supporting experimentation or multi-model strategies.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsCreateVariation.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "create-feature-flag",
+   "desc": "Creates a new feature flag within a project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/featureFlagsCreate.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "delete-ai-config",
+   "desc": "Deletes an AI Config and its associated variations.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsDelete.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "delete-ai-config-variation",
+   "desc": "Deletes an AI Config variation.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsDeleteVariation.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "delete-feature-flag",
+   "desc": "Removes a feature flag from the project.",
+   "restricted": false,
+   "expert_audience": null,
+   "gold_role": "sink",
+   "gold_channels": [],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/featureFlagsDelete.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "get-ai-config",
+   "desc": "Retrieves details of a specific AI Config, including variations and model settings.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsGet.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "get-ai-config-targeting",
+   "desc": "Retrieves the targeting details of a specific AI Config, including individual targets, rules, and rollouts.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsGetTargeting.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "get-ai-config-variation",
+   "desc": "Retrieves an AI configuration variation.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsGetVariation.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "get-audit-log-entries",
+   "desc": "Fetches audit log entries for a LaunchDarkly account.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/auditLogListEntries.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "get-code-references",
+   "desc": "Identifies which repositories have code references to a given flag, helping agents determine if they're operating on the correct repository and understand the scope of cleanup (single vs multi-repo).",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/codeReferencesListRepositories.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "get-environments",
+   "desc": "Identifies which environments exist in a project and determines which are marked as \"critical\" (production, staging, etc.).",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/environmentsListByProject.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "get-feature-flag",
+   "desc": "Fetches the full configuration for a specific feature flag, including environments, variations, and targeting rules.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/featureFlagsGet.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "get-flag-status-across-environments",
+   "desc": "Returns lifecycle status (new, active, inactive, launched) based on actual usage patterns, evaluation counts, and configuration stability.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/featureFlagsGetStatus.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "list-ai-configs",
+   "desc": "Retrieves AI configuration settings for a specific project.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsList.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "list-feature-flags",
+   "desc": "Retrieves all feature flags within a project, including metadata and targeting rules.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/featureFlagsList.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "update-ai-config",
+   "desc": "Updates metadata or configuration of an existing AI Config.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsUpdate.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "update-ai-config-targeting",
+   "desc": "Updates the targeting of an existing AI Config.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsUpdateTargeting.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "update-ai-config-variation",
+   "desc": "Updates a specific variation within an AI Config.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/aiConfigsUpdateVariation.ts"
+  },
+  {
+   "service": "launchdarkly",
+   "name": "update-feature-flag",
+   "desc": "Updates the configuration of an existing feature flag.",
+   "restricted": true,
+   "expert_audience": [
+    "internal"
+   ],
+   "gold_role": "source_and_sink",
+   "gold_channels": [
+    "display_only",
+    "internal_email"
+   ],
+   "description_source": "servers/launchdarkly_mcp-server/src/mcp-server/tools/featureFlagsPatch.ts"
+  }
+ ],
+ "excluded": [
+  {
+   "service": "github",
+   "tool": "run_secret_scanning",
+   "reason": "not defined in the server source at the pinned commit"
+  },
+  {
+   "service": "sentry",
+   "tool": "execute_sentry_tool",
+   "reason": "meta-tool that dispatches other Sentry tools"
+  },
+  {
+   "service": "sentry",
+   "tool": "search_sentry_tools",
+   "reason": "meta-tool that lists other Sentry tools"
+  }
+ ]
+}

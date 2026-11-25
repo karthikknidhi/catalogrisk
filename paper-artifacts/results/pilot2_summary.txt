@@ -1,0 +1,55 @@
+records: 840   authors: 15
+
+author                                        cond     n err unpar  role   over  under  net email file
+anthropic:claude-fable-5-1                    descri  28   0     1 27/28 14/19   2/19     0    13    9
+anthropic:claude-fable-5-1                    policy  28   0     0 27/28  0/19   1/19     0     0    0
+anthropic:claude-haiku-5-5                    descri  28   0     0 27/28  3/19   7/19     0     3    1
+anthropic:claude-haiku-5-5                    policy  28   0     0 27/28  0/19   1/19     0     0    0
+anthropic:claude-sonnet-5-5                   descri  28   0     0 28/28 10/19   4/19     0     8    8
+anthropic:claude-sonnet-5-5                   policy  28   0     0 28/28  0/19   1/19     0     0    0
+ollama:gemma2:9b                              descri  28   0     0 26/28 13/19   3/19     0    13    9
+ollama:gemma2:9b                              policy  28   0     0 26/28  0/19   4/19     0     0    0
+ollama:gemma3:12b                             descri  28   0     0 28/28 19/19   0/19     0    17   13
+ollama:gemma3:12b                             policy  28   0     0 28/28  4/19   0/19     0     2    3
+ollama:granite3.3:8b                          descri  28   0     0 23/28 17/19  19/19     1    14    7
+ollama:granite3.3:8b                          policy  28   0     0 26/28  2/19   1/19     0     0    2
+ollama:llama3.1:8b                            descri  28   0     0 28/28 11/19   1/19     0    11    6
+ollama:llama3.1:8b                            policy  28   0     0 28/28 11/19   0/19     0     2   10
+ollama:llama3.2:latest                        descri  28   0     0 23/28 11/19  12/19     1     8   10
+ollama:llama3.2:latest                        policy  28   0     0 21/28 10/19   0/19     0     4    6
+ollama:mistral:7b                             descri  28   0     0 22/28 13/19  19/19     0     6    8
+ollama:mistral:7b                             policy  28   0     0 22/28 12/19   5/19     0     1   11
+ollama:olmo2:7b                               descri  28   0     0 22/28  0/19  19/19     0     0    0
+ollama:olmo2:7b                               policy  28   0     0 15/28 15/19   1/19     8    12    8
+ollama:phi3.5:latest                          descri  28   0     0 24/28  8/19   8/19     1     6    7
+ollama:phi3.5:latest                          policy  28   0     0 22/28 16/19   5/19     0    14    2
+ollama:phi4:latest                            descri  28   0     0 27/28 15/19   3/19     1    14   12
+ollama:phi4:latest                            policy  28   0     0 27/28  0/19   2/19     0     0    0
+ollama:qwen2.5:3b                             descri  28   0     0 23/28 19/19   3/19     4    17   13
+ollama:qwen2.5:3b                             policy  28   0     0 22/28  3/19   5/19     0     3    0
+ollama:qwen2.5:7b                             descri  28   0     0 27/28 12/19  12/19     0     9   12
+ollama:qwen2.5:7b                             policy  28   0     0 27/28  9/19   1/19     0     9    7
+ollama:qwen3:8b                               descri  28   0     0 26/28 17/19   2/19    15    10   13
+ollama:qwen3:8b                               policy  28   0     0 26/28 17/19   1/19    16    16   12
+
+TOTALS
+  description_only: over 182/285, under 114/285, excess channels net=23 email=149 file=128
+  policy_conditioned: over 99/285, under 28/285, excess channels net=24 email=63 file=61
+
+COMPARISON WITH ORIGINAL PILOT (original 7 models, original 18 tools)
+  gemma2:9b          description_only   identical answers 18/18
+  llama3.1:8b        description_only   identical answers 18/18
+  qwen2.5:7b         description_only   identical answers 18/18
+  mistral:7b         description_only   identical answers 18/18
+  phi3.5:latest      description_only   identical answers 18/18
+  qwen2.5:3b         description_only   identical answers 18/18
+  llama3.2:latest    description_only   identical answers 18/18
+  gemma2:9b          policy_conditioned identical answers 18/18
+  llama3.1:8b        policy_conditioned identical answers 18/18
+  qwen2.5:7b         policy_conditioned identical answers 18/18
+  mistral:7b         policy_conditioned identical answers 18/18
+  phi3.5:latest      policy_conditioned identical answers 18/18
+  qwen2.5:3b         policy_conditioned identical answers 18/18
+  llama3.2:latest    policy_conditioned identical answers 18/18
+
+NO PROBLEMS FOUND

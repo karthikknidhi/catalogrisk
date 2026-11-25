@@ -1,0 +1,224 @@
+{
+  "p": 0.08,
+  "n_seeds": 2000,
+  "sizes": [
+    10,
+    25,
+    50,
+    100,
+    200,
+    400
+  ],
+  "pilot_channel_mix": {
+    "description_only": {
+      "http": 23,
+      "email": 149,
+      "file": 128
+    },
+    "policy_conditioned": {
+      "http": 24,
+      "email": 63,
+      "file": 61
+    }
+  },
+  "mixes": {
+    "description_only": {
+      "channel_weights": {
+        "http": 0.07666666666666666,
+        "email": 0.49666666666666665,
+        "file": 0.4266666666666667
+      },
+      "by_size": {
+        "10": {
+          "n_sensitive": 3,
+          "http_only_vulnerable_rate": 0.022,
+          "http_only_vulnerable_ci95": [
+            0.0164,
+            0.0294
+          ],
+          "all_sink_vulnerable_rate": 0.218,
+          "all_sink_vulnerable_ci95": [
+            0.2005,
+            0.2366
+          ],
+          "all_sink_analytic": 0.2213,
+          "http_only_analytic": 0.0183
+        },
+        "25": {
+          "n_sensitive": 7,
+          "http_only_vulnerable_rate": 0.039,
+          "http_only_vulnerable_ci95": [
+            0.0314,
+            0.0484
+          ],
+          "all_sink_vulnerable_rate": 0.448,
+          "all_sink_vulnerable_ci95": [
+            0.4263,
+            0.4699
+          ],
+          "all_sink_analytic": 0.4422,
+          "http_only_analytic": 0.0422
+        },
+        "50": {
+          "n_sensitive": 15,
+          "http_only_vulnerable_rate": 0.0855,
+          "http_only_vulnerable_ci95": [
+            0.074,
+            0.0986
+          ],
+          "all_sink_vulnerable_rate": 0.71,
+          "all_sink_vulnerable_ci95": [
+            0.6897,
+            0.7295
+          ],
+          "all_sink_analytic": 0.7137,
+          "http_only_analytic": 0.0882
+        },
+        "100": {
+          "n_sensitive": 30,
+          "http_only_vulnerable_rate": 0.17,
+          "http_only_vulnerable_ci95": [
+            0.1542,
+            0.1871
+          ],
+          "all_sink_vulnerable_rate": 0.912,
+          "all_sink_vulnerable_ci95": [
+            0.8988,
+            0.9236
+          ],
+          "all_sink_analytic": 0.918,
+          "http_only_analytic": 0.1685
+        },
+        "200": {
+          "n_sensitive": 60,
+          "http_only_vulnerable_rate": 0.302,
+          "http_only_vulnerable_ci95": [
+            0.2823,
+            0.3225
+          ],
+          "all_sink_vulnerable_rate": 0.9935,
+          "all_sink_vulnerable_ci95": [
+            0.9889,
+            0.9962
+          ],
+          "all_sink_analytic": 0.9933,
+          "http_only_analytic": 0.3087
+        },
+        "400": {
+          "n_sensitive": 120,
+          "http_only_vulnerable_rate": 0.5265,
+          "http_only_vulnerable_ci95": [
+            0.5046,
+            0.5483
+          ],
+          "all_sink_vulnerable_rate": 1.0,
+          "all_sink_vulnerable_ci95": [
+            0.9981,
+            1.0
+          ],
+          "all_sink_analytic": 1.0,
+          "http_only_analytic": 0.5221
+        }
+      }
+    },
+    "policy_conditioned": {
+      "channel_weights": {
+        "http": 0.16216216216216217,
+        "email": 0.42567567567567566,
+        "file": 0.41216216216216217
+      },
+      "by_size": {
+        "10": {
+          "n_sensitive": 3,
+          "http_only_vulnerable_rate": 0.0455,
+          "http_only_vulnerable_ci95": [
+            0.0372,
+            0.0555
+          ],
+          "all_sink_vulnerable_rate": 0.218,
+          "all_sink_vulnerable_ci95": [
+            0.2005,
+            0.2366
+          ],
+          "all_sink_analytic": 0.2213,
+          "http_only_analytic": 0.0384
+        },
+        "25": {
+          "n_sensitive": 7,
+          "http_only_vulnerable_rate": 0.078,
+          "http_only_vulnerable_ci95": [
+            0.067,
+            0.0906
+          ],
+          "all_sink_vulnerable_rate": 0.448,
+          "all_sink_vulnerable_ci95": [
+            0.4263,
+            0.4699
+          ],
+          "all_sink_analytic": 0.4422,
+          "http_only_analytic": 0.0874
+        },
+        "50": {
+          "n_sensitive": 15,
+          "http_only_vulnerable_rate": 0.178,
+          "http_only_vulnerable_ci95": [
+            0.1619,
+            0.1954
+          ],
+          "all_sink_vulnerable_rate": 0.71,
+          "all_sink_vulnerable_ci95": [
+            0.6897,
+            0.7295
+          ],
+          "all_sink_analytic": 0.7137,
+          "http_only_analytic": 0.1779
+        },
+        "100": {
+          "n_sensitive": 30,
+          "http_only_vulnerable_rate": 0.3235,
+          "http_only_vulnerable_ci95": [
+            0.3034,
+            0.3443
+          ],
+          "all_sink_vulnerable_rate": 0.912,
+          "all_sink_vulnerable_ci95": [
+            0.8988,
+            0.9236
+          ],
+          "all_sink_analytic": 0.918,
+          "http_only_analytic": 0.3241
+        },
+        "200": {
+          "n_sensitive": 60,
+          "http_only_vulnerable_rate": 0.5305,
+          "http_only_vulnerable_ci95": [
+            0.5086,
+            0.5523
+          ],
+          "all_sink_vulnerable_rate": 0.9935,
+          "all_sink_vulnerable_ci95": [
+            0.9889,
+            0.9962
+          ],
+          "all_sink_analytic": 0.9933,
+          "http_only_analytic": 0.5432
+        },
+        "400": {
+          "n_sensitive": 120,
+          "http_only_vulnerable_rate": 0.7905,
+          "http_only_vulnerable_ci95": [
+            0.7721,
+            0.8078
+          ],
+          "all_sink_vulnerable_rate": 1.0,
+          "all_sink_vulnerable_ci95": [
+            0.9981,
+            1.0
+          ],
+          "all_sink_analytic": 1.0,
+          "http_only_analytic": 0.7913
+        }
+      }
+    }
+  }
+}

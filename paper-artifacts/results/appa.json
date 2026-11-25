@@ -1,0 +1,362 @@
+{
+  "rho_policy_fit": 0.4531,
+  "seeds_by_size": {
+    "10": 1000,
+    "25": 1000,
+    "50": 1000,
+    "100": 1000,
+    "200": 1000,
+    "400": 300
+  },
+  "gold_seeds": 100,
+  "by_regime": {
+    "gold": {
+      "10": {
+        "catalogs": 100,
+        "S": 3,
+        "appa_catalog_vulnerable": 0.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.0,
+          0.037
+        ],
+        "chaincaps_catalog_vulnerable": 0.0,
+        "appa_attack_block_rate": 1.0,
+        "paths": 500,
+        "paths_agree": 500,
+        "benign_completion_appa": 1.0
+      },
+      "25": {
+        "catalogs": 100,
+        "S": 7,
+        "appa_catalog_vulnerable": 0.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.0,
+          0.037
+        ],
+        "chaincaps_catalog_vulnerable": 0.0,
+        "appa_attack_block_rate": 1.0,
+        "paths": 1100,
+        "paths_agree": 1100,
+        "benign_completion_appa": 1.0
+      },
+      "50": {
+        "catalogs": 100,
+        "S": 15,
+        "appa_catalog_vulnerable": 0.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.0,
+          0.037
+        ],
+        "chaincaps_catalog_vulnerable": 0.0,
+        "appa_attack_block_rate": 1.0,
+        "paths": 2300,
+        "paths_agree": 2300,
+        "benign_completion_appa": 1.0
+      },
+      "100": {
+        "catalogs": 100,
+        "S": 30,
+        "appa_catalog_vulnerable": 0.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.0,
+          0.037
+        ],
+        "chaincaps_catalog_vulnerable": 0.0,
+        "appa_attack_block_rate": 1.0,
+        "paths": 4500,
+        "paths_agree": 4500,
+        "benign_completion_appa": 1.0
+      },
+      "200": {
+        "catalogs": 100,
+        "S": 60,
+        "appa_catalog_vulnerable": 0.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.0,
+          0.037
+        ],
+        "chaincaps_catalog_vulnerable": 0.0,
+        "appa_attack_block_rate": 1.0,
+        "paths": 9000,
+        "paths_agree": 9000,
+        "benign_completion_appa": 1.0
+      },
+      "400": {
+        "catalogs": 100,
+        "S": 120,
+        "appa_catalog_vulnerable": 0.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.0,
+          0.037
+        ],
+        "chaincaps_catalog_vulnerable": 0.0,
+        "appa_attack_block_rate": 1.0,
+        "paths": 18000,
+        "paths_agree": 18000,
+        "benign_completion_appa": 1.0
+      }
+    },
+    "low_error": {
+      "10": {
+        "catalogs": 1000,
+        "S": 3,
+        "appa_catalog_vulnerable": 0.209,
+        "appa_catalog_vulnerable_ci95": [
+          0.1849,
+          0.2353
+        ],
+        "chaincaps_catalog_vulnerable": 0.209,
+        "appa_attack_block_rate": 0.9243,
+        "paths": 3000,
+        "paths_agree": 3000,
+        "benign_completion_appa": null
+      },
+      "25": {
+        "catalogs": 1000,
+        "S": 7,
+        "appa_catalog_vulnerable": 0.437,
+        "appa_catalog_vulnerable_ci95": [
+          0.4066,
+          0.4679
+        ],
+        "chaincaps_catalog_vulnerable": 0.437,
+        "appa_attack_block_rate": 0.9233,
+        "paths": 7000,
+        "paths_agree": 7000,
+        "benign_completion_appa": null
+      },
+      "50": {
+        "catalogs": 1000,
+        "S": 15,
+        "appa_catalog_vulnerable": 0.705,
+        "appa_catalog_vulnerable_ci95": [
+          0.676,
+          0.7324
+        ],
+        "chaincaps_catalog_vulnerable": 0.705,
+        "appa_attack_block_rate": 0.9205,
+        "paths": 15000,
+        "paths_agree": 15000,
+        "benign_completion_appa": null
+      },
+      "100": {
+        "catalogs": 1000,
+        "S": 30,
+        "appa_catalog_vulnerable": 0.91,
+        "appa_catalog_vulnerable_ci95": [
+          0.8907,
+          0.9262
+        ],
+        "chaincaps_catalog_vulnerable": 0.91,
+        "appa_attack_block_rate": 0.9177,
+        "paths": 30000,
+        "paths_agree": 30000,
+        "benign_completion_appa": null
+      },
+      "200": {
+        "catalogs": 1000,
+        "S": 60,
+        "appa_catalog_vulnerable": 0.994,
+        "appa_catalog_vulnerable_ci95": [
+          0.987,
+          0.9972
+        ],
+        "chaincaps_catalog_vulnerable": 0.994,
+        "appa_attack_block_rate": 0.92,
+        "paths": 60000,
+        "paths_agree": 60000,
+        "benign_completion_appa": null
+      },
+      "400": {
+        "catalogs": 300,
+        "S": 120,
+        "appa_catalog_vulnerable": 1.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.9874,
+          1.0
+        ],
+        "chaincaps_catalog_vulnerable": 1.0,
+        "appa_attack_block_rate": 0.9207,
+        "paths": 36000,
+        "paths_agree": 36000,
+        "benign_completion_appa": null
+      }
+    },
+    "naive_calibrated": {
+      "10": {
+        "catalogs": 1000,
+        "S": 3,
+        "appa_catalog_vulnerable": 0.981,
+        "appa_catalog_vulnerable_ci95": [
+          0.9705,
+          0.9878
+        ],
+        "chaincaps_catalog_vulnerable": 0.981,
+        "appa_attack_block_rate": 0.2483,
+        "paths": 3000,
+        "paths_agree": 3000,
+        "benign_completion_appa": null
+      },
+      "25": {
+        "catalogs": 1000,
+        "S": 7,
+        "appa_catalog_vulnerable": 1.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.9962,
+          1.0
+        ],
+        "chaincaps_catalog_vulnerable": 1.0,
+        "appa_attack_block_rate": 0.2593,
+        "paths": 7000,
+        "paths_agree": 7000,
+        "benign_completion_appa": null
+      },
+      "50": {
+        "catalogs": 1000,
+        "S": 15,
+        "appa_catalog_vulnerable": 1.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.9962,
+          1.0
+        ],
+        "chaincaps_catalog_vulnerable": 1.0,
+        "appa_attack_block_rate": 0.245,
+        "paths": 15000,
+        "paths_agree": 15000,
+        "benign_completion_appa": null
+      },
+      "100": {
+        "catalogs": 1000,
+        "S": 30,
+        "appa_catalog_vulnerable": 1.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.9962,
+          1.0
+        ],
+        "chaincaps_catalog_vulnerable": 1.0,
+        "appa_attack_block_rate": 0.2502,
+        "paths": 30000,
+        "paths_agree": 30000,
+        "benign_completion_appa": null
+      },
+      "200": {
+        "catalogs": 1000,
+        "S": 60,
+        "appa_catalog_vulnerable": 1.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.9962,
+          1.0
+        ],
+        "chaincaps_catalog_vulnerable": 1.0,
+        "appa_attack_block_rate": 0.2525,
+        "paths": 60000,
+        "paths_agree": 60000,
+        "benign_completion_appa": null
+      },
+      "400": {
+        "catalogs": 300,
+        "S": 120,
+        "appa_catalog_vulnerable": 1.0,
+        "appa_catalog_vulnerable_ci95": [
+          0.9874,
+          1.0
+        ],
+        "chaincaps_catalog_vulnerable": 1.0,
+        "appa_attack_block_rate": 0.2523,
+        "paths": 36000,
+        "paths_agree": 36000,
+        "benign_completion_appa": null
+      }
+    },
+    "correlated_policy_fit": {
+      "10": {
+        "catalogs": 1000,
+        "S": 3,
+        "appa_catalog_vulnerable": 0.136,
+        "appa_catalog_vulnerable_ci95": [
+          0.1161,
+          0.1586
+        ],
+        "chaincaps_catalog_vulnerable": 0.136,
+        "appa_attack_block_rate": 0.9283,
+        "paths": 3000,
+        "paths_agree": 3000,
+        "benign_completion_appa": null
+      },
+      "25": {
+        "catalogs": 1000,
+        "S": 7,
+        "appa_catalog_vulnerable": 0.208,
+        "appa_catalog_vulnerable_ci95": [
+          0.184,
+          0.2343
+        ],
+        "chaincaps_catalog_vulnerable": 0.208,
+        "appa_attack_block_rate": 0.9184,
+        "paths": 7000,
+        "paths_agree": 7000,
+        "benign_completion_appa": null
+      },
+      "50": {
+        "catalogs": 1000,
+        "S": 15,
+        "appa_catalog_vulnerable": 0.256,
+        "appa_catalog_vulnerable_ci95": [
+          0.2299,
+          0.2839
+        ],
+        "chaincaps_catalog_vulnerable": 0.256,
+        "appa_attack_block_rate": 0.9158,
+        "paths": 15000,
+        "paths_agree": 15000,
+        "benign_completion_appa": null
+      },
+      "100": {
+        "catalogs": 1000,
+        "S": 30,
+        "appa_catalog_vulnerable": 0.284,
+        "appa_catalog_vulnerable_ci95": [
+          0.2569,
+          0.3127
+        ],
+        "chaincaps_catalog_vulnerable": 0.284,
+        "appa_attack_block_rate": 0.9351,
+        "paths": 30000,
+        "paths_agree": 30000,
+        "benign_completion_appa": null
+      },
+      "200": {
+        "catalogs": 1000,
+        "S": 60,
+        "appa_catalog_vulnerable": 0.36,
+        "appa_catalog_vulnerable_ci95": [
+          0.3308,
+          0.3902
+        ],
+        "chaincaps_catalog_vulnerable": 0.36,
+        "appa_attack_block_rate": 0.9221,
+        "paths": 60000,
+        "paths_agree": 60000,
+        "benign_completion_appa": null
+      },
+      "400": {
+        "catalogs": 300,
+        "S": 120,
+        "appa_catalog_vulnerable": 0.4267,
+        "appa_catalog_vulnerable_ci95": [
+          0.372,
+          0.4832
+        ],
+        "chaincaps_catalog_vulnerable": 0.4267,
+        "appa_attack_block_rate": 0.9322,
+        "paths": 36000,
+        "paths_agree": 36000,
+        "benign_completion_appa": null
+      }
+    }
+  },
+  "mixed_label_refused": true,
+  "mixed_label_message": "appa replay: policy refused: bad reader set in tool mcp/cat/s delta audience: `public` is the whole universe and cannot be combined with other entries",
+  "total_paths": 488400,
+  "total_paths_agree": 488400
+}

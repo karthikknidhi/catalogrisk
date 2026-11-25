@@ -1,0 +1,154 @@
+{
+  "p": 0.08,
+  "n_seeds": 2000,
+  "sizes": [
+    10,
+    25,
+    50,
+    100,
+    200,
+    400
+  ],
+  "rho": {
+    "description_only": 0.2905,
+    "policy_conditioned": 0.4531
+  },
+  "by_condition": {
+    "description_only": {
+      "10": {
+        "n_sensitive": 3,
+        "attack_block_rate_mean": 0.9243,
+        "catalog_vulnerable_rate": 0.168,
+        "catalog_vulnerable_ci95": [
+          0.1523,
+          0.185
+        ],
+        "catalog_vulnerable_analytic": 0.1704,
+        "effective_decisions_analytic": 2.24
+      },
+      "25": {
+        "n_sensitive": 7,
+        "attack_block_rate_mean": 0.9198,
+        "catalog_vulnerable_rate": 0.266,
+        "catalog_vulnerable_ci95": [
+          0.2471,
+          0.2858
+        ],
+        "catalog_vulnerable_analytic": 0.2623,
+        "effective_decisions_analytic": 3.65
+      },
+      "50": {
+        "n_sensitive": 15,
+        "attack_block_rate_mean": 0.9142,
+        "catalog_vulnerable_rate": 0.377,
+        "catalog_vulnerable_ci95": [
+          0.356,
+          0.3985
+        ],
+        "catalog_vulnerable_analytic": 0.3495,
+        "effective_decisions_analytic": 5.16
+      },
+      "100": {
+        "n_sensitive": 30,
+        "attack_block_rate_mean": 0.922,
+        "catalog_vulnerable_rate": 0.431,
+        "catalog_vulnerable_ci95": [
+          0.4094,
+          0.4528
+        ],
+        "catalog_vulnerable_analytic": 0.4256,
+        "effective_decisions_analytic": 6.65
+      },
+      "200": {
+        "n_sensitive": 60,
+        "attack_block_rate_mean": 0.9205,
+        "catalog_vulnerable_rate": 0.505,
+        "catalog_vulnerable_ci95": [
+          0.4831,
+          0.5269
+        ],
+        "catalog_vulnerable_analytic": 0.4954,
+        "effective_decisions_analytic": 8.2
+      },
+      "400": {
+        "n_sensitive": 120,
+        "attack_block_rate_mean": 0.9263,
+        "catalog_vulnerable_rate": 0.566,
+        "catalog_vulnerable_ci95": [
+          0.5442,
+          0.5876
+        ],
+        "catalog_vulnerable_analytic": 0.5581,
+        "effective_decisions_analytic": 9.79
+      }
+    },
+    "policy_conditioned": {
+      "10": {
+        "n_sensitive": 3,
+        "attack_block_rate_mean": 0.925,
+        "catalog_vulnerable_rate": 0.138,
+        "catalog_vulnerable_ci95": [
+          0.1236,
+          0.1538
+        ],
+        "catalog_vulnerable_analytic": 0.1467,
+        "effective_decisions_analytic": 1.9
+      },
+      "25": {
+        "n_sensitive": 7,
+        "attack_block_rate_mean": 0.9174,
+        "catalog_vulnerable_rate": 0.2035,
+        "catalog_vulnerable_ci95": [
+          0.1864,
+          0.2217
+        ],
+        "catalog_vulnerable_analytic": 0.2053,
+        "effective_decisions_analytic": 2.76
+      },
+      "50": {
+        "n_sensitive": 15,
+        "attack_block_rate_mean": 0.9148,
+        "catalog_vulnerable_rate": 0.2635,
+        "catalog_vulnerable_ci95": [
+          0.2447,
+          0.2832
+        ],
+        "catalog_vulnerable_analytic": 0.2583,
+        "effective_decisions_analytic": 3.58
+      },
+      "100": {
+        "n_sensitive": 30,
+        "attack_block_rate_mean": 0.9268,
+        "catalog_vulnerable_rate": 0.2965,
+        "catalog_vulnerable_ci95": [
+          0.2769,
+          0.3169
+        ],
+        "catalog_vulnerable_analytic": 0.3049,
+        "effective_decisions_analytic": 4.36
+      },
+      "200": {
+        "n_sensitive": 60,
+        "attack_block_rate_mean": 0.9238,
+        "catalog_vulnerable_rate": 0.3495,
+        "catalog_vulnerable_ci95": [
+          0.3289,
+          0.3707
+        ],
+        "catalog_vulnerable_analytic": 0.3492,
+        "effective_decisions_analytic": 5.15
+      },
+      "400": {
+        "n_sensitive": 120,
+        "attack_block_rate_mean": 0.9267,
+        "catalog_vulnerable_rate": 0.3895,
+        "catalog_vulnerable_ci95": [
+          0.3684,
+          0.4111
+        ],
+        "catalog_vulnerable_analytic": 0.391,
+        "effective_decisions_analytic": 5.95
+      }
+    }
+  }
+}

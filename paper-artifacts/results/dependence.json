@@ -1,0 +1,223 @@
+{
+  "model": "within-group perfect correlation; between-group independence",
+  "fixed_marginal_error_rate": 0.08,
+  "target_catalog_risk": 0.05,
+  "rows": [
+    {
+      "n_tools": 10,
+      "n_sensitive": 3,
+      "group_size": 1,
+      "independent_policy_decisions": 3,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.221312,
+      "tolerable_rate_at_5pct_risk": 0.016952
+    },
+    {
+      "n_tools": 10,
+      "n_sensitive": 3,
+      "group_size": 5,
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 10,
+      "n_sensitive": 3,
+      "group_size": 20,
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 10,
+      "n_sensitive": 3,
+      "group_size": "catalog",
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 25,
+      "n_sensitive": 7,
+      "group_size": 1,
+      "independent_policy_decisions": 7,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.442153,
+      "tolerable_rate_at_5pct_risk": 0.007301
+    },
+    {
+      "n_tools": 25,
+      "n_sensitive": 7,
+      "group_size": 5,
+      "independent_policy_decisions": 2,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.1536,
+      "tolerable_rate_at_5pct_risk": 0.025321
+    },
+    {
+      "n_tools": 25,
+      "n_sensitive": 7,
+      "group_size": 20,
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 25,
+      "n_sensitive": 7,
+      "group_size": "catalog",
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 50,
+      "n_sensitive": 15,
+      "group_size": 1,
+      "independent_policy_decisions": 15,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.713703,
+      "tolerable_rate_at_5pct_risk": 0.003414
+    },
+    {
+      "n_tools": 50,
+      "n_sensitive": 15,
+      "group_size": 5,
+      "independent_policy_decisions": 3,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.221312,
+      "tolerable_rate_at_5pct_risk": 0.016952
+    },
+    {
+      "n_tools": 50,
+      "n_sensitive": 15,
+      "group_size": 20,
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 50,
+      "n_sensitive": 15,
+      "group_size": "catalog",
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 100,
+      "n_sensitive": 30,
+      "group_size": 1,
+      "independent_policy_decisions": 30,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.918034,
+      "tolerable_rate_at_5pct_risk": 0.001708
+    },
+    {
+      "n_tools": 100,
+      "n_sensitive": 30,
+      "group_size": 5,
+      "independent_policy_decisions": 6,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.393645,
+      "tolerable_rate_at_5pct_risk": 0.008512
+    },
+    {
+      "n_tools": 100,
+      "n_sensitive": 30,
+      "group_size": 20,
+      "independent_policy_decisions": 2,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.1536,
+      "tolerable_rate_at_5pct_risk": 0.025321
+    },
+    {
+      "n_tools": 100,
+      "n_sensitive": 30,
+      "group_size": "catalog",
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 200,
+      "n_sensitive": 60,
+      "group_size": 1,
+      "independent_policy_decisions": 60,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.993282,
+      "tolerable_rate_at_5pct_risk": 0.000855
+    },
+    {
+      "n_tools": 200,
+      "n_sensitive": 60,
+      "group_size": 5,
+      "independent_policy_decisions": 12,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.632334,
+      "tolerable_rate_at_5pct_risk": 0.004265
+    },
+    {
+      "n_tools": 200,
+      "n_sensitive": 60,
+      "group_size": 20,
+      "independent_policy_decisions": 3,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.221312,
+      "tolerable_rate_at_5pct_risk": 0.016952
+    },
+    {
+      "n_tools": 200,
+      "n_sensitive": 60,
+      "group_size": "catalog",
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    },
+    {
+      "n_tools": 400,
+      "n_sensitive": 120,
+      "group_size": 1,
+      "independent_policy_decisions": 120,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.999955,
+      "tolerable_rate_at_5pct_risk": 0.000427
+    },
+    {
+      "n_tools": 400,
+      "n_sensitive": 120,
+      "group_size": 5,
+      "independent_policy_decisions": 24,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.864821,
+      "tolerable_rate_at_5pct_risk": 0.002135
+    },
+    {
+      "n_tools": 400,
+      "n_sensitive": 120,
+      "group_size": 20,
+      "independent_policy_decisions": 6,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.393645,
+      "tolerable_rate_at_5pct_risk": 0.008512
+    },
+    {
+      "n_tools": 400,
+      "n_sensitive": 120,
+      "group_size": "catalog",
+      "independent_policy_decisions": 1,
+      "marginal_error_rate": 0.08,
+      "catalog_vulnerable_probability": 0.08,
+      "tolerable_rate_at_5pct_risk": 0.05
+    }
+  ]
+}

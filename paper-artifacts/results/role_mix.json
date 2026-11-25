@@ -1,0 +1,116 @@
+{
+  "p": 0.08,
+  "n_seeds": 2000,
+  "sizes": [
+    50,
+    100,
+    200
+  ],
+  "by_frac": {
+    "0.1": {
+      "50": {
+        "n_sensitive": 5,
+        "attack_block_rate_mean": 0.9206,
+        "catalog_vulnerable_rate": 0.3395,
+        "catalog_vulnerable_ci95": [
+          0.3191,
+          0.3605
+        ],
+        "analytic": 0.3409,
+        "analytic_inside_ci": true
+      },
+      "100": {
+        "n_sensitive": 10,
+        "attack_block_rate_mean": 0.9184,
+        "catalog_vulnerable_rate": 0.571,
+        "catalog_vulnerable_ci95": [
+          0.5492,
+          0.5925
+        ],
+        "analytic": 0.5656,
+        "analytic_inside_ci": true
+      },
+      "200": {
+        "n_sensitive": 20,
+        "attack_block_rate_mean": 0.9188,
+        "catalog_vulnerable_rate": 0.818,
+        "catalog_vulnerable_ci95": [
+          0.8005,
+          0.8343
+        ],
+        "analytic": 0.8113,
+        "analytic_inside_ci": true
+      }
+    },
+    "0.3": {
+      "50": {
+        "n_sensitive": 15,
+        "attack_block_rate_mean": 0.9209,
+        "catalog_vulnerable_rate": 0.71,
+        "catalog_vulnerable_ci95": [
+          0.6897,
+          0.7295
+        ],
+        "analytic": 0.7137,
+        "analytic_inside_ci": true
+      },
+      "100": {
+        "n_sensitive": 30,
+        "attack_block_rate_mean": 0.9194,
+        "catalog_vulnerable_rate": 0.912,
+        "catalog_vulnerable_ci95": [
+          0.8988,
+          0.9236
+        ],
+        "analytic": 0.918,
+        "analytic_inside_ci": true
+      },
+      "200": {
+        "n_sensitive": 60,
+        "attack_block_rate_mean": 0.9197,
+        "catalog_vulnerable_rate": 0.9935,
+        "catalog_vulnerable_ci95": [
+          0.9889,
+          0.9962
+        ],
+        "analytic": 0.9933,
+        "analytic_inside_ci": true
+      }
+    },
+    "0.5": {
+      "50": {
+        "n_sensitive": 25,
+        "attack_block_rate_mean": 0.9198,
+        "catalog_vulnerable_rate": 0.877,
+        "catalog_vulnerable_ci95": [
+          0.8619,
+          0.8907
+        ],
+        "analytic": 0.8756,
+        "analytic_inside_ci": true
+      },
+      "100": {
+        "n_sensitive": 50,
+        "attack_block_rate_mean": 0.9199,
+        "catalog_vulnerable_rate": 0.981,
+        "catalog_vulnerable_ci95": [
+          0.974,
+          0.9861
+        ],
+        "analytic": 0.9845,
+        "analytic_inside_ci": true
+      },
+      "200": {
+        "n_sensitive": 100,
+        "attack_block_rate_mean": 0.9199,
+        "catalog_vulnerable_rate": 1.0,
+        "catalog_vulnerable_ci95": [
+          0.9981,
+          1.0
+        ],
+        "analytic": 0.9998,
+        "analytic_inside_ci": true
+      }
+    }
+  }
+}
